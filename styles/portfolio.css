@@ -1,0 +1,482 @@
+/* Portfolio Page Specific Styles */
+
+/* Morphing Background */
+.morphing-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #000, #111);
+    overflow: hidden;
+    z-index: -1;
+}
+
+.morphing-bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(circle at 30% 20%, rgba(255, 0, 255, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 70% 80%, rgba(0, 255, 255, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 50% 50%, rgba(0, 255, 0, 0.1) 0%, transparent 50%);
+    animation: morphingShape 10s ease-in-out infinite;
+}
+
+@keyframes morphingShape {
+    0%, 100% { 
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+        transform: scale(1) rotate(0deg);
+    }
+    25% { 
+        border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+        transform: scale(1.1) rotate(90deg);
+    }
+    50% { 
+        border-radius: 50% 60% 30% 60% / 60% 30% 60% 40%;
+        transform: scale(0.9) rotate(180deg);
+    }
+    75% { 
+        border-radius: 60% 40% 60% 40% / 40% 60% 40% 60%;
+        transform: scale(1.05) rotate(270deg);
+    }
+}
+
+/* Hologram Text Effect */
+.hologram-text {
+    position: relative;
+    color: #fff;
+    text-shadow: 
+        0 0 10px rgba(255, 0, 255, 0.8),
+        0 0 20px rgba(255, 0, 255, 0.6),
+        0 0 30px rgba(255, 0, 255, 0.4);
+    animation: hologramFlicker 3s ease-in-out infinite;
+}
+
+.hologram-text::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, transparent, rgba(255, 0, 255, 0.3), transparent);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: hologramScan 2s linear infinite;
+}
+
+@keyframes hologramFlicker {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.8; }
+    75% { opacity: 0.9; }
+}
+
+@keyframes hologramScan {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+/* Portfolio Filters */
+.portfolio-filters {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    position: relative;
+    overflow: hidden;
+}
+
+.filter-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 0, 255, 0.3), transparent);
+    transition: left 0.5s ease;
+}
+
+.filter-btn:hover::before {
+    left: 100%;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background: rgba(255, 0, 255, 0.2);
+    border-color: rgba(255, 0, 255, 0.5);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(255, 0, 255, 0.3);
+}
+
+/* Portfolio Section */
+.portfolio-section {
+    padding: 5rem 0;
+    background: linear-gradient(135deg, #0a0a0a, #1a1a1a);
+    position: relative;
+}
+
+.portfolio-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        repeating-linear-gradient(
+            45deg,
+            transparent,
+            transparent 10px,
+            rgba(255, 0, 255, 0.02) 10px,
+            rgba(255, 0, 255, 0.02) 20px
+        );
+    animation: gridMove 15s linear infinite;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+    position: relative;
+    z-index: 1;
+}
+
+.portfolio-item {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.5s ease;
+    transform-style: preserve-3d;
+}
+
+.portfolio-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, transparent, rgba(255, 0, 255, 0.1), transparent);
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.portfolio-item:hover::before {
+    opacity: 1;
+}
+
+.portfolio-item:hover {
+    transform: translateY(-20px) scale(1.05) rotateY(10deg);
+    box-shadow: 
+        0 30px 60px rgba(255, 0, 255, 0.3),
+        0 0 100px rgba(255, 0, 255, 0.2);
+    border-color: rgba(255, 0, 255, 0.5);
+}
+
+.portfolio-image {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+}
+
+.portfolio-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.5s ease;
+}
+
+.portfolio-item:hover .portfolio-image img {
+    transform: scale(1.1) rotate(2deg);
+}
+
+.portfolio-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        to bottom,
+        transparent,
+        rgba(0, 0, 0, 0.7)
+    );
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 2rem;
+    opacity: 0;
+    transition: all 0.3s ease;
+    z-index: 2;
+}
+
+.portfolio-item:hover .portfolio-overlay {
+    opacity: 1;
+}
+
+.portfolio-overlay h3 {
+    color: #fff;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 0 10px rgba(255, 0, 255, 0.8);
+}
+
+.portfolio-overlay p {
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 1rem;
+}
+
+/* Testimonials Section */
+.testimonials-section {
+    padding: 5rem 0;
+    background: linear-gradient(135deg, #1a1a1a, #0a0a0a);
+}
+
+.testimonials-slider {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.testimonial-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 2rem;
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.testimonial-card::before {
+    content: '"';
+    position: absolute;
+    top: -10px;
+    left: 20px;
+    font-size: 4rem;
+    color: rgba(255, 0, 255, 0.3);
+    font-family: serif;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(255, 0, 255, 0.2);
+    border-color: rgba(255, 0, 255, 0.3);
+}
+
+.testimonial-content p {
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    font-style: italic;
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.testimonial-author img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid rgba(255, 0, 255, 0.5);
+}
+
+.testimonial-author h4 {
+    color: #fff;
+    font-size: 1.1rem;
+    margin-bottom: 0.2rem;
+}
+
+.testimonial-author span {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.9rem;
+}
+
+/* Project Modal */
+.project-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+}
+
+.modal-content {
+    position: relative;
+    width: 90%;
+    max-width: 1000px;
+    margin: 2rem auto;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    animation: modalSlideIn 0.5s ease-out;
+}
+
+@keyframes modalSlideIn {
+    0% { 
+        transform: translateY(-100px) scale(0.8);
+        opacity: 0;
+    }
+    100% { 
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+}
+
+.close-modal {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+    z-index: 1001;
+    transition: all 0.3s ease;
+}
+
+.close-modal:hover {
+    color: #ff0000;
+    transform: scale(1.2);
+}
+
+.modal-body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.project-gallery img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.project-details h2 {
+    color: #fff;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.project-details p {
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.project-tech h4 {
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+.tech-tags {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+}
+
+.tech-tags span {
+    background: rgba(255, 0, 255, 0.2);
+    color: #fff;
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    border: 1px solid rgba(255, 0, 255, 0.3);
+}
+
+.project-links {
+    display: flex;
+    gap: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .portfolio-filters {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .testimonials-slider {
+        grid-template-columns: 1fr;
+    }
+    
+    .modal-body {
+        grid-template-columns: 1fr;
+    }
+    
+    .project-links {
+        flex-direction: column;
+    }
+}
+
+/* Shocking Effects */
+.portfolio-item:nth-child(odd):hover {
+    animation: hologramShock 0.8s ease-out;
+}
+
+@keyframes hologramShock {
+    0% { transform: translateY(-20px) scale(1.05) rotateY(10deg); }
+    25% { transform: translateY(-20px) scale(1.1) rotateY(15deg) rotateX(5deg); }
+    50% { transform: translateY(-20px) scale(1.05) rotateY(10deg) rotateX(-5deg); }
+    75% { transform: translateY(-20px) scale(1.1) rotateY(15deg) rotateX(3deg); }
+    100% { transform: translateY(-20px) scale(1.05) rotateY(10deg); }
+}
+
+.testimonial-card:nth-child(even):hover {
+    animation: testimonialGlow 0.5s ease-out;
+}
+
+@keyframes testimonialGlow {
+    0% { box-shadow: 0 20px 40px rgba(255, 0, 255, 0.2); }
+    50% { box-shadow: 0 20px 40px rgba(255, 0, 255, 0.6), 0 0 80px rgba(255, 0, 255, 0.4); }
+    100% { box-shadow: 0 20px 40px rgba(255, 0, 255, 0.2); }
+}
+
+.filter-btn:nth-child(3n+1):hover {
+    animation: filterPulse 0.3s ease-out;
+}
+
+@keyframes filterPulse {
+    0% { transform: translateY(-3px) scale(1); }
+    50% { transform: translateY(-3px) scale(1.1); }
+    100% { transform: translateY(-3px) scale(1); }
+} 

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - DesignHub</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/components.css">
+    <link rel="stylesheet" href="styles/animations.css">
+    <link rel="stylesheet" href="styles/portfolio.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <a href="index.html" class="logo">DesignHub</a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="portfolio.html" class="nav-link active">Portfolio</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero portfolio-hero">
+        <div class="morphing-bg"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title hologram-text">Our Portfolio</h1>
+                <p class="hero-subtitle">Showcasing our best work</p>
+                <div class="portfolio-filters">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="web">Web Design</button>
+                    <button class="filter-btn" data-filter="mobile">Mobile Apps</button>
+                    <button class="filter-btn" data-filter="branding">Branding</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Grid -->
+    <section class="portfolio-section">
+        <div class="container">
+            <div class="portfolio-grid">
+                <div class="portfolio-item" data-category="web" data-aos="zoom-in">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600" alt="Project 1">
+                        <div class="portfolio-overlay">
+                            <h3>E-commerce Platform</h3>
+                            <p>Modern online shopping experience</p>
+                            <button class="btn btn-primary view-project">View Project</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item" data-category="mobile" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=600" alt="Project 2">
+                        <div class="portfolio-overlay">
+                            <h3>Fitness App</h3>
+                            <p>Personal training companion</p>
+                            <button class="btn btn-primary view-project">View Project</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item" data-category="branding" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=600" alt="Project 3">
+                        <div class="portfolio-overlay">
+                            <h3>Tech Startup Brand</h3>
+                            <p>Complete brand identity</p>
+                            <button class="btn btn-primary view-project">View Project</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item" data-category="web" data-aos="zoom-in" data-aos-delay="600">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=600" alt="Project 4">
+                        <div class="portfolio-overlay">
+                            <h3>Restaurant Website</h3>
+                            <p>Elegant dining experience</p>
+                            <button class="btn btn-primary view-project">View Project</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item" data-category="mobile" data-aos="zoom-in" data-aos-delay="800">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=600" alt="Project 5">
+                        <div class="portfolio-overlay">
+                            <h3>Travel App</h3>
+                            <p>Explore the world</p>
+                            <button class="btn btn-primary view-project">View Project</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item" data-category="branding" data-aos="zoom-in" data-aos-delay="1000">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=600" alt="Project 6">
+                        <div class="portfolio-overlay">
+                            <h3>Creative Agency</h3>
+                            <p>Visual identity design</p>
+                            <button class="btn btn-primary view-project">View Project</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+        <div class="container">
+            <h2 class="section-title">Client Testimonials</h2>
+            <div class="testimonials-slider">
+                <div class="testimonial-card" data-aos="fade-up">
+                    <div class="testimonial-content">
+                        <p>"DesignHub transformed our business with their incredible design work. The results exceeded our expectations!"</p>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100" alt="Client">
+                            <div>
+                                <h4>John Smith</h4>
+                                <span>CEO, TechCorp</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="testimonial-content">
+                        <p>"Working with DesignHub was a game-changer. Their attention to detail and creativity is unmatched."</p>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=100" alt="Client">
+                            <div>
+                                <h4>Sarah Wilson</h4>
+                                <span>Founder, StartupXYZ</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="testimonial-content">
+                        <p>"The team at DesignHub delivered beyond what we imagined. Highly recommended!"</p>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100" alt="Client">
+                            <div>
+                                <h4>Mike Johnson</h4>
+                                <span>Marketing Director, BigCo</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Modal -->
+    <div class="project-modal" id="projectModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-body">
+                <div class="project-gallery">
+                    <img src="" alt="Project Image" id="modalImage">
+                </div>
+                <div class="project-details">
+                    <h2 id="modalTitle"></h2>
+                    <p id="modalDescription"></p>
+                    <div class="project-tech">
+                        <h4>Technologies Used:</h4>
+                        <div class="tech-tags" id="modalTech"></div>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="btn btn-primary" id="modalLive">Live Demo</a>
+                        <a href="#" class="btn btn-outline" id="modalCode">View Code</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>DesignHub</h3>
+                    <p>Creating digital experiences that matter</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-link">Twitter</a>
+                        <a href="#" class="social-link">LinkedIn</a>
+                        <a href="#" class="social-link">Instagram</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 DesignHub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop">↑</button>
+
+    <script src="js/main.js"></script>
+    <script src="js/portfolio.js"></script>
+</body>
+</html> 

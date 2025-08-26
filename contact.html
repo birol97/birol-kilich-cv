@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - DesignHub</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/components.css">
+    <link rel="stylesheet" href="styles/animations.css">
+    <link rel="stylesheet" href="styles/contact.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <a href="index.html" class="logo">DesignHub</a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+                <li><a href="contact.html" class="nav-link active">Contact</a></li>
+            </ul>
+            <div class="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero contact-hero">
+        <div class="energy-field"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title cyber-text">Get In Touch</h1>
+                <p class="hero-subtitle">Let's create something amazing together</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info" data-aos="fade-right">
+                    <h2>Let's Talk</h2>
+                    <p>Ready to start your next project? We'd love to hear from you!</p>
+                    
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <div class="method-icon">📧</div>
+                            <div class="method-details">
+                                <h4>Email</h4>
+                                <p>hello@designhub.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <div class="method-icon">📱</div>
+                            <div class="method-details">
+                                <h4>Phone</h4>
+                                <p>+1 (555) 123-4567</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <div class="method-icon">📍</div>
+                            <div class="method-details">
+                                <h4>Location</h4>
+                                <p>San Francisco, CA</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links">
+                        <h4>Follow Us</h4>
+                        <div class="social-icons">
+                            <a href="#" class="social-icon">Twitter</a>
+                            <a href="#" class="social-icon">LinkedIn</a>
+                            <a href="#" class="social-icon">Instagram</a>
+                            <a href="#" class="social-icon">Dribbble</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form-container" data-aos="fade-left">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" required>
+                            <label for="name">Your Name</label>
+                            <div class="form-line"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" required>
+                            <label for="email">Your Email</label>
+                            <div class="form-line"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="text" id="subject" name="subject" required>
+                            <label for="subject">Subject</label>
+                            <div class="form-line"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                            <label for="message">Your Message</label>
+                            <div class="form-line"></div>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary submit-btn">
+                            <span class="btn-text">Send Message</span>
+                            <span class="btn-icon">→</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section">
+        <div class="container">
+            <h2 class="section-title">Find Us</h2>
+            <div class="map-container" data-aos="zoom-in">
+                <div class="map-placeholder">
+                    <div class="map-content">
+                        <h3>DesignHub Studio</h3>
+                        <p>123 Innovation Street<br>San Francisco, CA 94105</p>
+                        <div class="map-stats">
+                            <div class="stat">
+                                <span class="stat-number">24/7</span>
+                                <span class="stat-label">Support</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">100%</span>
+                                <span class="stat-label">Satisfaction</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="faq-grid">
+                <div class="faq-item" data-aos="fade-up">
+                    <div class="faq-question">
+                        <h3>What services do you offer?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We offer comprehensive design and development services including UI/UX design, web development, mobile apps, and digital marketing solutions.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="faq-question">
+                        <h3>How long does a project take?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Project timelines vary depending on complexity. A simple website might take 2-4 weeks, while complex applications can take 2-6 months.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="400">
+                    <div class="faq-question">
+                        <h3>Do you provide ongoing support?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes! We offer various support packages including maintenance, updates, and 24/7 technical support for all our clients.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="600">
+                    <div class="faq-question">
+                        <h3>What's your pricing structure?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We offer flexible pricing from fixed project rates to monthly retainers. Contact us for a custom quote based on your specific needs.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>DesignHub</h3>
+                    <p>Creating digital experiences that matter</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-link">Twitter</a>
+                        <a href="#" class="social-link">LinkedIn</a>
+                        <a href="#" class="social-link">Instagram</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 DesignHub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop">↑</button>
+
+    <script src="js/main.js"></script>
+    <script src="js/contact.js"></script>
+</body>
+</html> 

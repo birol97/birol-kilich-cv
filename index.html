@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birol Kilich - Computer Engineer & Software Developer</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/components.css">
+    <link rel="stylesheet" href="styles/animations.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>Birol Kilich</h2>
+                <span class="logo-subtitle">Computer Engineer</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link active">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="services.html" class="nav-link">Experience</a></li>
+                <li><a href="portfolio.html" class="nav-link">Projects</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Hi, I'm <span class="gradient-text">Birol Kilich</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Computer Engineer & Software Developer with a result-driven attitude. 
+                    Experienced in full-stack development, IoT systems, and factory automation software.
+                </p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" onclick="scrollToSection('experience')">
+                        View Experience
+                    </button>
+                    <button class="btn btn-secondary" onclick="scrollToSection('projects')">
+                        See Projects
+                    </button>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="floating-elements">
+                    <div class="floating-card card-1">
+                        <i class="fas fa-code"></i>
+                        <span>Full-Stack</span>
+                    </div>
+                    <div class="floating-card card-2">
+                        <i class="fas fa-microchip"></i>
+                        <span>IoT</span>
+                    </div>
+                    <div class="floating-card card-3">
+                        <i class="fas fa-cogs"></i>
+                        <span>Automation</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="articles-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Professional Experience</h2>
+                <p>My journey in software development and engineering</p>
+            </div>
+            
+            <div class="experience-grid">
+                <div class="experience-card">
+                    <div class="experience-header">
+                        <h3>Software Developer</h3>
+                        <span class="company">Hyperion Systems Engineering</span>
+                        <span class="duration">September 2023 - June 2025</span>
+                    </div>
+                    <p class="experience-description">
+                        Testing, developing and maintaining factory automation software.
+                    </p>
+                    <div class="tech-stack">
+                        <h4>Tech Stack:</h4>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Oracle</span>
+                            <span class="tech-tag">MySQL</span>
+                            <span class="tech-tag">MSSQL</span>
+                            <span class="tech-tag">PL/SQL</span>
+                            <span class="tech-tag">SSRS</span>
+                            <span class="tech-tag">.NET Framework</span>
+                            <span class="tech-tag">C#</span>
+                            <span class="tech-tag">MQTT</span>
+                            <span class="tech-tag">RabbitMQ</span>
+                            <span class="tech-tag">XAML</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="categories-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Education</h2>
+                <p>Academic background in Computer Engineering</p>
+            </div>
+            
+            <div class="education-grid">
+                <div class="education-card">
+                    <div class="education-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Computer Systems Engineering BEng</h3>
+                    <p class="university">University of Kent, United Kingdom</p>
+                    <p class="grade">Grade: 2:2</p>
+                    <span class="duration">September 2016 - June 2020</span>
+                </div>
+                
+                <div class="education-card">
+                    <div class="education-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Computing and Electronics MSc</h3>
+                    <p class="university">Dublin City University, Ireland</p>
+                    <p class="grade">Grade: 2:2</p>
+                    <span class="duration">September 2022 - July 2023</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="newsletter-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Featured Projects</h2>
+                <p>Showcase of my technical skills and innovative solutions</p>
+            </div>
+            
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>E-Commerce Platform for Small Business</h3>
+                    <p>Web app similar to marketplaces enabling users to shop from range of brands with complementary mobile app for shop owners' stock and visuality management.</p>
+                    <div class="tech-stack">
+                        <h4>Web App Tech Stack:</h4>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Next.js 15</span>
+                            <span class="tech-tag">React 19</span>
+                            <span class="tech-tag">TypeScript</span>
+                            <span class="tech-tag">Tailwind</span>
+                            <span class="tech-tag">Supabase</span>
+                            <span class="tech-tag">Docker</span>
+                            <span class="tech-tag">Vercel</span>
+                        </div>
+                        <h4>Mobile App Tech Stack:</h4>
+                        <div class="tech-tags">
+                            <span class="tech-tag">React Native</span>
+                            <span class="tech-tag">Expo</span>
+                            <span class="tech-tag">Supabase</span>
+                        </div>
+                        <h4>AI Integration:</h4>
+                        <div class="tech-tags">
+                            <span class="tech-tag">ComfyUI</span>
+                            <span class="tech-tag">Stable Diffusion</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <h3>Full Stack IoT System</h3>
+                    <p>Implemented full stack IoT solution to understand simple IoT pipelines.</p>
+                    <div class="tech-stack">
+                        <h4>Tech Stack:</h4>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Raspberry Pi</span>
+                            <span class="tech-tag">ADXL345 Accelerometer</span>
+                            <span class="tech-tag">I2C Sensors</span>
+                            <span class="tech-tag">GPIO</span>
+                            <span class="tech-tag">MQTT Protocol</span>
+                            <span class="tech-tag">C++</span>
+                            <span class="tech-tag">Python</span>
+                        </div>
+                    </div>
+                    <a href="https://birol97.github.io/blogs2.html" class="project-link" target="_blank">View Details</a>
+                </div>
+                
+                <div class="project-card">
+                    <h3>Dynamic Traffic Light System using Google Maps</h3>
+                    <p>Adapting traffic light cycles based on color maps that indicate traffic congestion rate in Google Maps.</p>
+                    <a href="https://github.com/birol97/Dynamic-traffic-light-system-using-Google-Maps" class="project-link" target="_blank">View on GitHub</a>
+                </div>
+                
+                <div class="project-card">
+                    <h3>Predicting Human Behaviour based on Sensor Data</h3>
+                    <p>Implementation and research on various different machine learning algorithms with explanatory database, predicting human behavior both with unsupervised and supervised learning.</p>
+                    <div class="tech-stack">
+                        <h4>Tech Stack:</h4>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Machine Learning</span>
+                            <span class="tech-tag">Supervised Learning</span>
+                            <span class="tech-tag">Unsupervised Learning</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Technical Skills</h2>
+                <p>Technologies and tools I work with</p>
+            </div>
+            
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Backend Development</h3>
+                    <div class="tech-tags">
+                        <span class="tech-tag">C#</span>
+                        <span class="tech-tag">.NET Framework</span>
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Node.js</span>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Frontend Development</h3>
+                    <div class="tech-tags">
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">Next.js</span>
+                        <span class="tech-tag">TypeScript</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">XAML</span>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Databases</h3>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Oracle</span>
+                        <span class="tech-tag">MySQL</span>
+                        <span class="tech-tag">MSSQL</span>
+                        <span class="tech-tag">PL/SQL</span>
+                        <span class="tech-tag">Supabase</span>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>IoT & Communication</h3>
+                    <div class="tech-tags">
+                        <span class="tech-tag">MQTT</span>
+                        <span class="tech-tag">RabbitMQ</span>
+                        <span class="tech-tag">Raspberry Pi</span>
+                        <span class="tech-tag">GPIO</span>
+                        <span class="tech-tag">I2C</span>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Mobile Development</h3>
+                    <div class="tech-tags">
+                        <span class="tech-tag">React Native</span>
+                        <span class="tech-tag">Expo</span>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Tools & Platforms</h3>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Docker</span>
+                        <span class="tech-tag">Vercel</span>
+                        <span class="tech-tag">Git</span>
+                        <span class="tech-tag">SSRS</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Get In Touch</h2>
+                <p>Interested in working together? Let's discuss your project</p>
+                <div class="contact-buttons">
+                    <a href="contact.html" class="btn btn-primary">Contact Me</a>
+                    <a href="https://github.com/birol97" class="btn btn-secondary" target="_blank">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Birol Kilich</h3>
+                    <p>Computer Engineer & Software Developer passionate about creating innovative solutions.</p>
+                    <div class="social-links">
+                        <a href="https://github.com/birol97" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://linkedin.com/in/birol-kilich" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="mailto:birol.kilich@email.com"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#experience">Experience</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Skills</h4>
+                    <ul>
+                        <li><a href="#skills">Backend Development</a></li>
+                        <li><a href="#skills">Frontend Development</a></li>
+                        <li><a href="#skills">IoT Systems</a></li>
+                        <li><a href="#skills">Mobile Development</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>birol.kilich@email.com</p>
+                    <p>Available for remote work</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Birol Kilich. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/articles.js"></script>
+    <script src="js/animations.js"></script>
+</body>
+</html> 
